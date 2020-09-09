@@ -19,3 +19,12 @@ mainMsg.innerText = mainImage.alt;
 let mainFlame = document.querySelector('#gallery .main');
 mainFlame.insertBefore(mainImage, null);
 mainFlame.insertBefore(mainMsg, null);
+
+// サムネイル写真画像の表示
+let thumbFlame = document.querySelector('#gallery .thumb');
+for (let i = 0; i < album.length; i++) {
+    thumbImage = document.createElement('img');
+    thumbImage.setAttribute('src', album[i].src);
+    thumbImage.setAttribute('alt', album[i].msg);
+    thumbFlame.insertBefore(thumbImage, null);
+}
